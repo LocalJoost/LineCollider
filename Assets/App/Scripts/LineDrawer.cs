@@ -18,12 +18,11 @@ public class LineDrawer : MonoBehaviour
 	    var direction = 1;
 	    foreach (var line in _lineFromTo)
 	    {
-	        var lineGameObject = Instantiate(_lineObject);
+	        var lineGameObject = Instantiate(_lineObject, _container.transform);
 	        var controller = lineGameObject.GetComponent<LineController>();
-	        var inBetweenPoint = (line.To.transform.position - line.From.transform.position) * 0.5f +
-	                             Vector3.forward * 0.1f * direction;
-	        lineGameObject.transform.parent = _container.transform;
-
+	        var inBetweenPoint = (line.To.transform.position -
+	                              line.From.transform.position) * 0.5f +
+	                              Vector3.forward * 0.1f * direction;
             controller.SetPoints(new []{line.From.transform.position,
                 line.From.transform.position + inBetweenPoint,
                 line.To.transform.position });
