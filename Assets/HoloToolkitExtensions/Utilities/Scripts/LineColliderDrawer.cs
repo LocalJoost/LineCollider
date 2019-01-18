@@ -22,7 +22,8 @@ namespace HoloToolkitExtensions.Utilities
             {
                 if (p < lineRenderer.positionCount - 1)
                 {
-                    AddColliderToLine(lineRenderer, lineRenderer.GetPosition(p), lineRenderer.GetPosition(p + 1));
+                    AddColliderToLine(lineRenderer, lineRenderer.GetPosition(p), 
+                        lineRenderer.GetPosition(p + 1));
                 }
             }
         }

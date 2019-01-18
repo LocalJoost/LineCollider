@@ -1,7 +1,8 @@
 ﻿using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-public class ColorToggler : MonoBehaviour, IInputClickHandler {
+public class ColorToggler : MonoBehaviour, IInputClickHandler
+{
 
     [SerializeField]
     private Color _toggleColor = Color.red;

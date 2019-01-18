@@ -24,7 +24,9 @@ public class LineDrawer : MonoBehaviour
 	                             Vector3.forward * 0.1f * direction;
 	        lineGameObject.transform.parent = _container.transform;
 
-            controller.SetPoints(new []{line.From.transform.position, line.From.transform.position + inBetweenPoint, line.To.transform.position });
+            controller.SetPoints(new []{line.From.transform.position,
+                line.From.transform.position + inBetweenPoint,
+                line.To.transform.position });
 	        direction = -direction;
 	    }
 	}

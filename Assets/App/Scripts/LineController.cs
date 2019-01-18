@@ -18,17 +18,4 @@ public class LineController : MonoBehaviour
             colliderDrawer.AddColliderToLine(lineRenderer);
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.L))
-        {
-            var lineRenderer = GetComponent<LineRenderer>();
-            var colliderDrawer = GetComponent<LineColliderDrawer>();
-            if (colliderDrawer != null)
-            {
-                colliderDrawer.AddColliderToLine(lineRenderer);
-            }
-        }
-    }
 }
